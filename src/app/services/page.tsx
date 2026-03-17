@@ -233,7 +233,7 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section style={{ padding: "64px 0", backgroundColor: "#0C0C0C" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", backgroundColor: "#222222" }}>
+          <div className="ef-services-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1px", backgroundColor: "#222222" }}>
             {services.map((service, i) => {
               const Icon = service.icon;
               return (
@@ -260,6 +260,73 @@ export default function ServicesPage() {
                 </AnimatedSection>
               );
             })}
+
+            {/* CTA card filling remaining grid space */}
+            <div className="ef-services-cta" style={{ gridColumn: "span 3", minHeight: "100%" }}>
+              <AnimatedSection delay={services.length * 60} className="h-full">
+              <Link
+                href="/contact"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
+                  backgroundColor: "#111111",
+                  backgroundImage: "url(/images/54602042741_a0a9895dd9_o.jpg)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  padding: "40px 32px",
+                  height: "100%",
+                  minHeight: "100%",
+                  boxSizing: "border-box",
+                  textDecoration: "none",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(12,12,12,0.75)" }} />
+                <div style={{ position: "relative", zIndex: 1 }}>
+                  <h2 style={{
+                    fontFamily: "var(--font-oswald), Oswald, sans-serif",
+                    fontSize: "clamp(24px, 3vw, 36px)",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    color: "#FFFFFF",
+                    margin: "0 0 12px 0",
+                    lineHeight: 1.2,
+                  }}>
+                    Need a Custom <span style={{ color: "#C41B1B" }}>Solution?</span>
+                  </h2>
+                  <p style={{
+                    fontFamily: "var(--font-inter), Inter, sans-serif",
+                    fontSize: "14px",
+                    color: "#9CA3AF",
+                    margin: "0 0 24px 0",
+                    lineHeight: 1.7,
+                    maxWidth: "480px",
+                  }}>
+                    We tailor our services to fit your unique event needs. Get in touch to discuss your vision.
+                  </p>
+                  <span style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontFamily: "var(--font-oswald), Oswald, sans-serif",
+                    fontSize: "13px",
+                    fontWeight: 600,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
+                    padding: "14px 28px",
+                    backgroundColor: "#C41B1B",
+                    color: "#FFFFFF",
+                  }}>
+                    Get in Touch <ArrowRight size={16} />
+                  </span>
+                </div>
+              </Link>
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>

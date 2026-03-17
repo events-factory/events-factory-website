@@ -139,6 +139,28 @@ body {
 .ef-form-card { padding: 24px; }
 @media (min-width: 640px) { .ef-form-card { padding: 40px; } }
 
+/* Services grid: 1 → 2 → 4 columns */
+.ef-services-grid {
+  grid-template-columns: 1fr !important;
+}
+.ef-services-cta {
+  grid-column: span 1 !important;
+}
+.ef-services-cta,
+.ef-services-cta > div,
+.ef-services-cta > div > a {
+  height: 100%;
+  min-height: 100%;
+}
+@media (min-width: 640px) {
+  .ef-services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .ef-services-cta { grid-column: span 1 !important; }
+}
+@media (min-width: 1024px) {
+  .ef-services-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .ef-services-cta { grid-column: span 3 !important; }
+}
+
 /* Hide decorative elements on small screens */
 .ef-hide-mobile { display: none; }
 @media (min-width: 768px) {
