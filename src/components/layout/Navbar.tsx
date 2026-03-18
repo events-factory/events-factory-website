@@ -63,7 +63,7 @@ export default function Navbar() {
             style={{ flexShrink: 0 }}
           >
             <Image
-              src="/Events-Factory-Logo_W_with-Tagline(1).png"
+              src="/EF logo Red with White Tagline.png"
               alt="Events Factory"
               width={180}
               height={50}
@@ -164,18 +164,6 @@ export default function Navbar() {
             gap: '32px',
           }}
         >
-          <Image
-            src="/Events-Factory-Logo_W_with-Tagline(1).png"
-            alt="Events Factory"
-            width={240}
-            height={67}
-            style={{
-              height: '56px',
-              width: 'auto',
-              objectFit: 'contain',
-              marginBottom: '16px',
-            }}
-          />
           {navLinks.map((link) => (
             <Link
               key={link.href}

@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function CTABanner() {
+  const pathname = usePathname();
   return (
     <section
       style={{
@@ -107,24 +111,46 @@ export default function CTABanner() {
             >
               Start Planning
             </Link>
-            <Link
-              href="/portfolio"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                fontFamily: "var(--font-oswald), Oswald, sans-serif",
-                fontSize: "13px",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
-                padding: "16px 40px",
-                border: "1px solid #333333",
-                color: "#FFFFFF",
-                textDecoration: "none",
-              }}
-            >
-              See Our Work
-            </Link>
+            {pathname === "/portfolio" ? (
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  fontFamily: "var(--font-oswald), Oswald, sans-serif",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
+                  padding: "16px 40px",
+                  border: "1px solid #333333",
+                  color: "#FFFFFF",
+                  backgroundColor: "transparent",
+                  cursor: "pointer",
+                }}
+              >
+                See Our Work
+              </button>
+            ) : (
+              <Link
+                href="/portfolio"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  fontFamily: "var(--font-oswald), Oswald, sans-serif",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
+                  padding: "16px 40px",
+                  border: "1px solid #333333",
+                  color: "#FFFFFF",
+                  textDecoration: "none",
+                }}
+              >
+                See Our Work
+              </Link>
+            )}
           </div>
         </AnimatedSection>
       </div>

@@ -1,23 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
-  Building2,
-  Landmark,
+  CalendarCheck,
+  MonitorPlay,
   Mic2,
-  Users,
-  Camera,
-  Lightbulb,
-  Presentation,
-  Sparkles,
-  ArrowRight,
-  ShieldCheck,
-  Handshake,
-  UtensilsCrossed,
-  Theater,
-  MonitorSpeaker,
+  LayoutTemplate,
   Languages,
+  Package,
+  Lightbulb,
   ClipboardCheck,
-  CookingPot,
+  Handshake,
+  MapPin,
+  ShieldCheck,
+  Truck,
+  Palette,
+  ArrowRight,
 } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -31,123 +29,108 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: Building2,
-    title: "Event Design & Management",
+    icon: CalendarCheck,
+    image: "/services/event management services.jpg",
+    title: "Event Management Services",
     description:
-      "End-to-end event management from concept to execution. Our experienced team handles every detail — venue selection, vendor coordination, logistics, and on-site management — so you can focus on enjoying the moment.",
+      "End-to-end planning and execution for corporate events, government summits, galas, and international conferences — delivered with precision and care.",
     features: ["Concept development", "Budget management", "Vendor sourcing", "On-site coordination"],
   },
   {
+    icon: MonitorPlay,
+    image: "/services/Digital Event Management Solutions.jpg",
+    title: "Digital Event Management Solutions",
+    description:
+      "Seamless hybrid and virtual event experiences powered by cutting-edge platforms, live streaming, real-time engagement tools, and digital accreditation.",
+    features: ["Hybrid events", "Live streaming", "Virtual platforms", "Digital accreditation"],
+  },
+  {
     icon: Mic2,
-    title: "AV & Technical Production",
+    image: "/images/54602042741_a0a9895dd9_o.jpg",
+    title: "Production Services",
     description:
-      "State-of-the-art audio-visual setups that transform any space. We provide professional sound systems, LED screens, dynamic lighting rigs, and full technical crew to ensure your event looks and sounds extraordinary.",
-    features: ["Professional sound systems", "LED walls & screens", "Stage lighting design", "Live streaming"],
+      "World-class AV production, professional sound systems, LED walls, dynamic lighting rigs, and a full technical crew — ensuring your event looks and sounds extraordinary.",
+    features: ["Professional sound", "LED walls & screens", "Stage lighting design", "Live streaming"],
   },
   {
-    icon: Building2,
-    title: "Corporate Events",
+    icon: LayoutTemplate,
+    image: "/services/Exhibition Management Services.jpg",
+    title: "Exhibition Management Services",
     description:
-      "Conferences, AGMs, product launches, and team-building retreats that reflect your brand's professionalism. We combine creativity with corporate precision to deliver events that achieve your business objectives.",
-    features: ["Conference management", "Product launches", "Team-building retreats", "Annual galas"],
-  },
-  {
-    icon: Landmark,
-    title: "Government & NGO Events",
-    description:
-      "High-level summits, ministerial meetings, and institutional events that demand precision, protocol expertise, and flawless logistics. We manage every detail so delegates can focus on what matters.",
-    features: ["Summit management", "Protocol coordination", "VIP logistics", "Multi-language support"],
-  },
-  {
-    icon: Presentation,
-    title: "Conferences & Exhibitions",
-    description:
-      "Professional conference management for local, regional, and international events. From registration systems to exhibition booth design, we handle the complexity so delegates can focus on the content.",
-    features: ["Registration management", "Exhibition design", "Speaker coordination", "Accreditation systems"],
-  },
-  {
-    icon: Lightbulb,
-    title: "Décor & Set Design",
-    description:
-      "Transformative décor that turns any venue into an immersive experience. Our creative team designs custom sets, floral arrangements, lighting atmospheres, and thematic environments.",
-    features: ["Custom set design", "Floral arrangements", "Themed environments", "Furniture rental"],
-  },
-  {
-    icon: Camera,
-    title: "Photography & Videography",
-    description:
-      "Capture every meaningful moment with our professional photography and videography team. From same-day edits to cinematic event films, we preserve your memories in stunning quality.",
-    features: ["Event photography", "Cinematic videography", "Same-day edits", "Aerial drone footage"],
-  },
-  {
-    icon: Users,
-    title: "Brand Activations",
-    description:
-      "Create genuine connections between your brand and your audience through immersive experiential campaigns. We design activations that spark conversations, drive engagement, and leave lasting impressions.",
-    features: ["Experiential marketing", "Pop-up events", "Product sampling", "Social media integration"],
-  },
-  {
-    icon: Sparkles,
-    title: "Entertainment & Talent",
-    description:
-      "From live bands and DJs to spoken word artists and cultural performers, we source and manage world-class entertainment that elevates your event atmosphere.",
-    features: ["Live music booking", "DJ services", "Cultural performers", "MC & host services"],
-  },
-  {
-    icon: ShieldCheck,
-    title: "Protocol Team",
-    description:
-      "Professional protocol officers trained to manage VIP arrivals, seating arrangements, and diplomatic etiquette. We ensure every high-profile guest receives the attention and respect they deserve.",
-    features: ["VIP reception", "Diplomatic protocol", "Seating coordination", "Guest escorts"],
-  },
-  {
-    icon: Handshake,
-    title: "B2B Meetings",
-    description:
-      "Structured business-to-business matchmaking sessions that connect the right people at the right time. We handle scheduling, venue setup, and follow-up coordination for productive networking.",
-    features: ["Matchmaking systems", "Meeting scheduling", "Dedicated meeting rooms", "Follow-up coordination"],
-  },
-  {
-    icon: UtensilsCrossed,
-    title: "Dinner & Side Events",
-    description:
-      "Elegant dinner galas, cocktail receptions, and curated side events that complement your main programme. We manage everything from menu selection to entertainment and ambiance.",
-    features: ["Gala dinners", "Cocktail receptions", "Themed evenings", "Menu curation"],
-  },
-  {
-    icon: Theater,
-    title: "Stage & Furniture Setup",
-    description:
-      "Custom stage construction and furniture rental tailored to your event's scale and aesthetic. From conference-style seating to lounge areas, we create the perfect environment.",
-    features: ["Custom stage builds", "Furniture rental", "Layout design", "Themed setups"],
-  },
-  {
-    icon: MonitorSpeaker,
-    title: "MC & Presenters",
-    description:
-      "Experienced masters of ceremony and professional presenters who keep your event flowing seamlessly. We source bilingual and multilingual MCs suited to your audience.",
-    features: ["Professional MCs", "Bilingual presenters", "Panel moderators", "Award hosts"],
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Accreditation & Delegate Management",
-    description:
-      "Streamlined registration, badge printing, and delegate tracking systems for conferences of any size. We ensure smooth check-in and real-time attendance monitoring.",
-    features: ["Online registration", "Badge printing", "QR check-in", "Attendance tracking"],
-  },
-  {
-    icon: CookingPot,
-    title: "Hospitality & Catering",
-    description:
-      "Premium catering services and hospitality management that leave a lasting impression. From local Rwandan cuisine to international menus, we cater to every palate and dietary requirement.",
-    features: ["Menu planning", "On-site catering", "Dietary accommodations", "Beverage service"],
+      "Custom exhibition booth design, floor management, registration systems, and accreditation — handling every logistical detail so delegates can focus on the content.",
+    features: ["Booth design", "Floor management", "Registration systems", "Accreditation"],
   },
   {
     icon: Languages,
-    title: "Simultaneous Interpretation",
+    image: "/services/Simultaneous Interpretation Services.jpg",
+    title: "Simultaneous Interpretation Services",
     description:
-      "Professional real-time interpretation services in multiple languages, complete with booth setup and receiver distribution. Essential for international conferences and multilingual events.",
+      "Professional real-time interpretation services in multiple languages, complete with booth setup and receiver distribution. Essential for international conferences.",
     features: ["Multi-language booths", "Professional interpreters", "Receiver distribution", "Technical setup"],
+  },
+  {
+    icon: Package,
+    image: "/services/Rental Services.jpg",
+    title: "Rental Services",
+    description:
+      "Comprehensive inventory of event equipment available for rental — from staging and furniture to AV gear, tents, and décor — tailored to any event scale.",
+    features: ["AV equipment", "Staging & furniture", "Tents & structures", "Décor items"],
+  },
+  {
+    icon: Lightbulb,
+    image: "/services/Event Strategy & Programme Design.jpg",
+    title: "Event Strategy & Programme Design",
+    description:
+      "Development of the overall event concept, objectives, and format — combined with structured programme design, session flow, speaker coordination, and thematic coherence for impactful delivery.",
+    features: ["Concept & objectives", "Format planning", "Programme structuring", "Speaker flow"],
+  },
+  {
+    icon: ClipboardCheck,
+    image: "/services/Project Management & Coordination.jpg",
+    title: "Project Management & Coordination",
+    description:
+      "End-to-end management of all event components, timelines, deliverables, and service providers to ensure seamless execution from brief to closing.",
+    features: ["Timeline management", "Deliverable tracking", "Vendor coordination", "Risk management"],
+  },
+  {
+    icon: Handshake,
+    image: "/services/Networking & Social Events.jpg",
+    title: "Networking & Social Events",
+    description:
+      "Curated gala dinners, cocktail receptions, and networking experiences that bring delegates, partners, and stakeholders together in memorable settings.",
+    features: ["Gala dinner production", "Cocktail receptions", "Delegate networking", "VIP hospitality"],
+  },
+  {
+    icon: MapPin,
+    image: "/images/Kigali_convention_center.jpg",
+    title: "Venue Sourcing & Management",
+    description:
+      "Identification, contracting, and full operational management of venues, including site inspections, layout planning, and venue liaison.",
+    features: ["Site inspections", "Contract negotiation", "Layout design", "Venue liaison"],
+  },
+  {
+    icon: ShieldCheck,
+    image: "/services/Protocol & VIP Management.jpg",
+    title: "Protocol & VIP Management",
+    description:
+      "Planning and delivery of official protocol services, including VIP handling, seating plans, flags, precedence, and official ceremonies.",
+    features: ["VIP reception", "Diplomatic protocol", "Seating coordination", "Official ceremonies"],
+  },
+  {
+    icon: Truck,
+    image: "/services/Logistics Planning & On-Site Operations.jpg",
+    title: "Logistics Planning & On-Site Operations",
+    description:
+      "Comprehensive logistics coordination including equipment, materials, staff deployment, and operational flow during the event.",
+    features: ["Equipment logistics", "Staff deployment", "Materials management", "On-site flow"],
+  },
+  {
+    icon: Palette,
+    image: "/services/Event Branding & Visual Identity.jpg",
+    title: "Event Branding & Visual Identity",
+    description:
+      "Design coordination and deployment of event branding across venues, signage, backdrops, stage design, and all printed materials.",
+    features: ["Venue branding", "Signage & backdrops", "Stage design", "Print materials"],
   },
 ];
 
@@ -185,7 +168,7 @@ export default function ServicesPage() {
           backgroundColor: "#0C0C0C",
           position: "relative",
           overflow: "hidden",
-          backgroundImage: "url(/images/54602042741_a0a9895dd9_o.jpg)",
+          backgroundImage: "url(/images/54602344410_622b39755c_o.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -233,30 +216,65 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section style={{ padding: "64px 0", backgroundColor: "#0C0C0C" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
-          <div className="ef-services-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1px", backgroundColor: "#222222" }}>
+          <div className="ef-services-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px", backgroundColor: "#222222" }}>
             {services.map((service, i) => {
               const Icon = service.icon;
+              const hasImage = "image" in service && service.image;
               return (
                 <AnimatedSection key={service.title} delay={i * 60} className="h-full">
-                  <div style={{ backgroundColor: "#111111", padding: "40px 32px", height: "100%", boxSizing: "border-box", display: "flex", flexDirection: "column" }}>
-                    <div style={{ width: "52px", height: "52px", border: "1px solid rgba(196,27,27,0.5)", backgroundColor: "rgba(196,27,27,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "24px", flexShrink: 0 }}>
-                      <Icon size={22} color="#C41B1B" />
+                  {hasImage ? (
+                    /* Image card — photo on top, text below */
+                    <div style={{ backgroundColor: "#111111", display: "flex", flexDirection: "column", height: "100%", borderTop: "3px solid #C41B1B" }}>
+                      {/* Image */}
+                      <div style={{ position: "relative", width: "100%", height: "200px", flexShrink: 0, overflow: "hidden" }}>
+                        <Image
+                          src={(service as typeof service & { image: string }).image}
+                          alt={service.title}
+                          fill
+                          style={{ objectFit: "cover", objectPosition: "center" }}
+                        />
+                        {/* Bottom fade into card background */}
+                        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "60px", background: "linear-gradient(to bottom, transparent, #111111)" }} />
+                      </div>
+                      {/* Text content */}
+                      <div style={{ padding: "20px 24px 28px", display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                        <h2 style={{ fontFamily: "var(--font-oswald), Oswald, sans-serif", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", color: "#FFFFFF", margin: "0 0 10px 0", letterSpacing: "0.06em" }}>
+                          {service.title}
+                        </h2>
+                        <p style={{ fontFamily: "var(--font-inter), Inter, sans-serif", fontSize: "13px", lineHeight: 1.65, color: "#9CA3AF", margin: "0 0 16px 0", flexGrow: 1, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                          {service.description}
+                        </p>
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                          {service.features.slice(0, 3).map((feat) => (
+                            <span key={feat} style={{ fontFamily: "var(--font-inter), Inter, sans-serif", fontSize: "10px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", border: "1px solid rgba(255,255,255,0.12)", padding: "3px 8px" }}>
+                              {feat}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                    <h2 style={{ fontFamily: "var(--font-oswald), Oswald, sans-serif", fontSize: "17px", fontWeight: 600, textTransform: "uppercase", color: "#FFFFFF", margin: "0 0 12px 0", letterSpacing: "0.05em" }}>
-                      {service.title}
-                    </h2>
-                    <p style={{ fontFamily: "var(--font-inter), Inter, sans-serif", fontSize: "14px", lineHeight: 1.7, color: "#9CA3AF", margin: "0 0 20px 0", flexGrow: 1 }}>
-                      {service.description}
-                    </p>
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "8px" }}>
-                      {service.features.map((feat) => (
-                        <li key={feat} style={{ display: "flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-inter), Inter, sans-serif", fontSize: "12px", color: "#9CA3AF" }}>
-                          <span style={{ width: "4px", height: "4px", borderRadius: "50%", backgroundColor: "#C41B1B", flexShrink: 0 }} />
-                          {feat}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  ) : (
+                    /* Icon card */
+                    <div style={{ backgroundColor: "#111111", padding: "36px 28px", boxSizing: "border-box", display: "flex", flexDirection: "column", borderTop: "3px solid #C41B1B", height: "100%" }}>
+                      <div style={{ width: "48px", height: "48px", border: "1px solid rgba(196,27,27,0.4)", backgroundColor: "rgba(196,27,27,0.08)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "22px", flexShrink: 0 }}>
+                        <Icon size={20} color="#C41B1B" />
+                      </div>
+                      <h2 style={{ fontFamily: "var(--font-oswald), Oswald, sans-serif", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", color: "#FFFFFF", margin: "0 0 12px 0", letterSpacing: "0.06em" }}>
+                        {service.title}
+                      </h2>
+                      <p style={{ fontFamily: "var(--font-inter), Inter, sans-serif", fontSize: "13px", lineHeight: 1.7, color: "#9CA3AF", margin: "0 0 20px 0", flexGrow: 1, display: "-webkit-box", WebkitLineClamp: 4, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                        {service.description}
+                      </p>
+                      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "7px" }}>
+                        {service.features.map((feat) => (
+                          <li key={feat} style={{ display: "flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-inter), Inter, sans-serif", fontSize: "11px", color: "#6B7280" }}>
+                            <span style={{ width: "3px", height: "3px", borderRadius: "50%", backgroundColor: "#C41B1B", flexShrink: 0 }} />
+                            {feat}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </AnimatedSection>
               );
             })}

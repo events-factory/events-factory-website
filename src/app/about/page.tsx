@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Heart, Shield, Lightbulb, Globe, ArrowRight } from "lucide-react";
+import { ShieldCheck, Star, Users, Heart, ClipboardCheck, ArrowRight } from "lucide-react";
 
 /* hero bg kept as CSS background-image for reliability */
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -16,28 +16,34 @@ export const metadata: Metadata = {
 
 const values = [
   {
+    icon: ShieldCheck,
+    title: "Integrity",
+    description:
+      "We act with transparency, ethics, respect, and accountability in everything we do.",
+  },
+  {
+    icon: Star,
+    title: "Excellence",
+    description:
+      "We deliver with professionalism, strong systems, and high standards at every level of execution.",
+  },
+  {
+    icon: Users,
+    title: "Collaboration",
+    description:
+      "We grow through teamwork, mutual support, and clear communication.",
+  },
+  {
     icon: Heart,
-    title: "Passion",
+    title: "Empathy",
     description:
-      "We pour heart and soul into every event. No detail is too small, no vision too ambitious.",
+      "We listen, understand, and respond with care to the needs of clients, partners, and each other.",
   },
   {
-    icon: Shield,
-    title: "Reliability",
+    icon: ClipboardCheck,
+    title: "Responsibility",
     description:
-      "When we commit, we deliver. Our clients trust us with their most important moments.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Creativity",
-    description:
-      "We push boundaries to create immersive experiences that surprise and delight.",
-  },
-  {
-    icon: Globe,
-    title: "Pan-African Vision",
-    description:
-      "Rooted in Rwanda, we bring African excellence to events across the continent and beyond.",
+      "We take individual and collective ownership of our actions, performance, and growth.",
   },
 ];
 
@@ -52,7 +58,7 @@ export default function AboutPage() {
           backgroundColor: "#0C0C0C",
           position: "relative",
           overflow: "hidden",
-          backgroundImage: "url(/images/christmas-carols-concert_54998929431_o.jpg)",
+          backgroundImage: "url(/images/20250217_194712.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -78,20 +84,21 @@ export default function AboutPage() {
                 margin: "8px 0 0 0",
               }}
             >
-              Our <span style={{ color: "#C41B1B" }}>Story</span>
+              About <span style={{ color: "#C41B1B" }}>Us</span>
             </h1>
+           
           </AnimatedSection>
         </div>
       </section>
 
       {/* Mission Statement */}
-      <section style={{ padding: "80px 0", backgroundColor: "#141414", borderTop: "1px solid #222222", borderBottom: "1px solid #222222" }}>
+      <section style={{ padding: "0", backgroundColor: "#141414", borderTop: "1px solid #222222", borderBottom: "1px solid #222222" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
           <AnimatedSection>
             <blockquote
               style={{
                 fontFamily: "var(--font-oswald), Oswald, sans-serif",
-                fontSize: "clamp(28px, 5vw, 48px)",
+                fontSize: "32px",
                 fontWeight: 300,
                 color: "#FFFFFF",
                 lineHeight: 1.2,
@@ -99,8 +106,8 @@ export default function AboutPage() {
                 margin: 0,
               }}
             >
-              &ldquo;We believe every event is an opportunity to create a{" "}
-              <span style={{ color: "#C41B1B" }}>memory that lasts forever</span>
+              &ldquo;We create outstanding events through {" "}
+              <span style={{ color: "#C41B1B" }}>people, innovation and partnerships.</span>
               .&rdquo;
             </blockquote>
           </AnimatedSection>
@@ -112,7 +119,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
           <div className="ef-grid-2col">
             <AnimatedSection>
-              <SectionLabel>The Beginning</SectionLabel>
+              <SectionLabel>Our Story</SectionLabel>
               <h2
                 style={{
                   fontFamily: "var(--font-oswald), Oswald, sans-serif",
@@ -156,10 +163,10 @@ export default function AboutPage() {
 
             {/* Image + Stats side */}
             <AnimatedSection delay={150}>
-              <div style={{ position: "relative", aspectRatio: "16/9", overflow: "hidden", marginBottom: "1px" }}>
+              <div style={{ position: "relative", aspectRatio: "16/9", overflow: "hidden", marginBottom: "1px", borderRadius: "12px" }}>
                 <Image
-                  src="/images/54602342565_c010c5bc52_o.jpg"
-                  alt="ISCA Conference managed by Events Factory"
+                  src="/images/Kigali_convention_center.jpg"
+                  alt="Kigali Convention Center"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -168,10 +175,10 @@ export default function AboutPage() {
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", backgroundColor: "#222222" }}>
                 {[
-                  { value: "200+", label: "Events Delivered" },
-                  { value: "8+", label: "Years of Excellence" },
-                  { value: "150+", label: "Happy Clients" },
-                  { value: "10+", label: "Countries" },
+                  { value: "400+", label: "Events Delivered" },
+                  { value: "20", label: "Years Experience" },
+                  { value: "250K+", label: "Delegates Hosted" },
+                  { value: "250+", label: "Exhibitions & Trade Shows" },
                 ].map((stat) => (
                   <div key={stat.label} style={{ backgroundColor: "#0C0C0C", padding: "40px", textAlign: "center" }}>
                     <div style={{ fontFamily: "var(--font-oswald), Oswald, sans-serif", fontSize: "48px", fontWeight: 700, color: "#C41B1B" }}>
@@ -210,7 +217,7 @@ export default function AboutPage() {
             </div>
           </AnimatedSection>
 
-          <div className="ef-grid-4col" style={{ gap: "1px", backgroundColor: "#222222" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "1px", backgroundColor: "#222222" }}>
             {values.map((value, i) => {
               const Icon = value.icon;
               return (

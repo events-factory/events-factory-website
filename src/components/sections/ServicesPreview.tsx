@@ -1,32 +1,32 @@
 import Link from "next/link";
-import { Mic2, Users, Building2, Globe, ArrowRight } from "lucide-react";
+import { CalendarCheck, MonitorPlay, Mic2, LayoutTemplate, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionLabel from "@/components/ui/SectionLabel";
 
 const services = [
   {
-    icon: Building2,
-    title: "Corporate Events",
+    icon: CalendarCheck,
+    title: "Event Management Services",
     description:
-      "Conferences, product launches, team-building retreats, and annual galas — executed with precision and professionalism.",
+      "End-to-end planning and execution for corporate events, government summits, galas, and international conferences — delivered with precision and care.",
   },
   {
-    icon: Globe,
-    title: "Conferences & Summits",
+    icon: MonitorPlay,
+    title: "Digital Event Management Solutions",
     description:
-      "International conferences, government summits, and high-level meetings — managed with protocol expertise and precision.",
+      "Seamless hybrid and virtual event experiences powered by cutting-edge platforms, live streaming, real-time engagement tools, and digital accreditation.",
   },
   {
     icon: Mic2,
-    title: "AV & Production",
+    title: "Production",
     description:
-      "State-of-the-art sound systems, LED walls, dynamic lighting rigs, and full technical production for any scale.",
+      "World-class AV production, professional sound systems, LED walls, dynamic lighting rigs, and a full technical crew — ensuring your event looks and sounds extraordinary.",
   },
   {
-    icon: Users,
-    title: "Brand Activations",
+    icon: LayoutTemplate,
+    title: "Exhibition Management",
     description:
-      "Immersive experiential campaigns that create genuine connections between your brand and your audience.",
+      "Custom exhibition booth design, registration systems, accreditation, and floor management — handling every detail so delegates focus on the content.",
   },
 ];
 

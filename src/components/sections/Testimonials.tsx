@@ -8,30 +8,23 @@ import SectionLabel from "@/components/ui/SectionLabel";
 const testimonials = [
   {
     quote:
-      "Events Factory transformed our annual conference into an unforgettable experience. Their attention to detail and professionalism is unmatched in Rwanda.",
-    name: "Jean-Baptiste Nkurunziza",
-    title: "CEO, Kigali Tech Hub",
+      "Rwanda Convention Bureau (RCB) acknowledge the professional manner in which Treasures Company/Events Factory Ltd executed the contract. Their effective organization and coordination significantly contributed to the successful delivery of the International Security Conference on Africa (ISCA). We recommend Events Factory for their dedication and excellent performance throughout the contract period and recommend them for their exemplary service.",
+    name: "Paul Mugabo",
+    title: "Director of Support Services, RCB — International Security Conference on Africa 2025",
     stars: 5,
   },
   {
     quote:
-      "Events Factory managed our international summit with over 500 delegates from 30 countries. The logistics, AV production, and on-site coordination were absolutely world-class.",
-    name: "Dr. Amina Uwimana",
-    title: "Director, Africa Policy Institute",
+      "Throughout the conference, Events Factory demonstrated exceptional professionalism, efficiency, attention to detail and a seamless coordination of logistics. From technical support to on-site facilitation, their team ensured a smooth and well-organized experience for all attendees.",
+    name: "Dr Shivon Byamukama",
+    title: "Deputy Vice Chancellor for Administrative and Financial Affairs, University of Global Health Equity — Advancing Medical Education in Africa Conference 2025",
     stars: 5,
   },
   {
     quote:
-      "The brand activation they organized for our product launch exceeded all expectations. The crowd engagement and execution were world-class.",
-    name: "Sarah Ingabire",
-    title: "Marketing Director, RwandaAir",
-    stars: 5,
-  },
-  {
-    quote:
-      "Professional, creative, and reliable. Events Factory is our go-to partner for all our corporate events. They consistently deliver beyond the brief.",
-    name: "Patrick Habimana",
-    title: "Head of Communications, BK Group",
+      "I wholeheartedly recommend Treasures Company Ltd (Events Factory) to anyone seeking reliable, professional and result driven event management services. Whether you are planning a corporate gathering, trade conference, or social event, you can trust them to deliver beyond expectations.",
+    name: "George Omuga",
+    title: "Managing Director, East African Trade Association — African Tea Convention and Exhibition 2024",
     stars: 5,
   },
 ];
