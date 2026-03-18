@@ -78,7 +78,7 @@ const services = [
   },
   {
     icon: Lightbulb,
-    image: "/services/Event Strategy & Programme Design.jpg",
+    image: "/services/Event Strategy and Programme Design.jpg",
     title: "Event Strategy & Programme Design",
     description:
       "Development of the overall event concept, objectives, and format — combined with structured programme design, session flow, speaker coordination, and thematic coherence for impactful delivery.",
@@ -86,7 +86,7 @@ const services = [
   },
   {
     icon: ClipboardCheck,
-    image: "/services/Project Management & Coordination.jpg",
+    image: "/services/Project Management and Coordination.jpg",
     title: "Project Management & Coordination",
     description:
       "End-to-end management of all event components, timelines, deliverables, and service providers to ensure seamless execution from brief to closing.",
@@ -94,7 +94,7 @@ const services = [
   },
   {
     icon: Handshake,
-    image: "/services/Networking & Social Events.jpg",
+    image: "/services/Networking and Social Events.jpg",
     title: "Networking & Social Events",
     description:
       "Curated gala dinners, cocktail receptions, and networking experiences that bring delegates, partners, and stakeholders together in memorable settings.",
@@ -110,7 +110,7 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    image: "/services/Protocol & VIP Management.jpg",
+    image: "/services/Protocol and VIP Management.jpg",
     title: "Protocol & VIP Management",
     description:
       "Planning and delivery of official protocol services, including VIP handling, seating plans, flags, precedence, and official ceremonies.",
@@ -118,7 +118,7 @@ const services = [
   },
   {
     icon: Truck,
-    image: "/services/Logistics Planning & On-Site Operations.jpg",
+    image: "/services/Logistics Planning and On-Site Operations.jpg",
     title: "Logistics Planning & On-Site Operations",
     description:
       "Comprehensive logistics coordination including equipment, materials, staff deployment, and operational flow during the event.",
@@ -126,7 +126,7 @@ const services = [
   },
   {
     icon: Palette,
-    image: "/services/Event Branding & Visual Identity.jpg",
+    image: "/services/Event Branding and Visual Identity.jpg",
     title: "Event Branding & Visual Identity",
     description:
       "Design coordination and deployment of event branding across venues, signage, backdrops, stage design, and all printed materials.",
