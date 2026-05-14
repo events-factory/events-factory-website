@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
+  { label: 'Destinations', href: '/destinations' },
   { label: 'SmartEvent', href: 'https://smartevent.rw/' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Contact', href: '/contact' },
@@ -137,10 +138,11 @@ export default function Navbar() {
             aria-label="Toggle menu"
             style={{
               display: 'block',
-              background: 'none',
+              background: scrolled || menuOpen ? 'none' : 'rgba(0,0,0,0.45)',
               border: 'none',
               color: '#FFFFFF',
               padding: '8px',
+              borderRadius: '4px',
               cursor: 'pointer',
             }}
           >
