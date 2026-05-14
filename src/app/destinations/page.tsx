@@ -354,12 +354,14 @@ export default function DestinationsPage() {
             {/* Facts */}
             <AnimatedSection delay={80}>
               <div
+                className="ef-facts-panel"
                 style={{
                   backgroundColor: "#0C0C0C",
                   padding: "36px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
+                  gap: "20px",
                   height: "420px",
                   boxSizing: "border-box",
                 }}
@@ -823,11 +825,17 @@ export default function DestinationsPage() {
       <style>{`
         body { overflow-x: hidden; }
 
+        .ef-grid-2col {
+          grid-template-columns: 1fr !important;
+        }
         .ef-services-grid {
           grid-template-columns: 1fr !important;
         }
         .ef-grid-4col {
           grid-template-columns: 1fr 1fr !important;
+        }
+        .ef-facts-panel {
+          height: auto !important;
         }
 
         @media (min-width: 640px) {
@@ -840,6 +848,12 @@ export default function DestinationsPage() {
         }
 
         @media (min-width: 1024px) {
+          .ef-grid-2col {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .ef-facts-panel {
+            height: 420px !important;
+          }
           .ef-services-grid {
             grid-template-columns: repeat(4, 1fr) !important;
           }
