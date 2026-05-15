@@ -173,7 +173,7 @@ export default function AboutPage() {
                 />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(12,12,12,0.6) 0%, transparent 50%)" }} />
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", backgroundColor: "#222222" }}>
+              <div className="ef-stats-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", backgroundColor: "#222222" }}>
                 {[
                   { value: "400+", label: "Events Delivered" },
                   { value: "20", label: "Years Experience" },
@@ -217,7 +217,7 @@ export default function AboutPage() {
             </div>
           </AnimatedSection>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "1px", backgroundColor: "#222222" }}>
+          <div className="ef-values-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "1px", backgroundColor: "#222222" }}>
             {values.map((value, i) => {
               const Icon = value.icon;
               return (
@@ -305,6 +305,37 @@ export default function AboutPage() {
       </section>
 
       <CTABanner />
+
+      <style>{`
+        body { overflow-x: hidden; }
+
+        .ef-grid-2col,
+        .ef-stats-grid {
+          display: grid !important;
+          grid-template-columns: 1fr !important;
+        }
+        .ef-values-grid {
+          grid-template-columns: 1fr 1fr !important;
+        }
+
+        @media (min-width: 640px) {
+          .ef-values-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .ef-grid-2col {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .ef-stats-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .ef-values-grid {
+            grid-template-columns: repeat(5, 1fr) !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }
