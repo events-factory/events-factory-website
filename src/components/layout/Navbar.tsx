@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Destinations', href: '/destinations' },
+  { label: 'DMC Services', href: '/destinations' },
   { label: 'SmartEvent', href: 'https://smartevent.rw/' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Contact', href: '/contact' },
