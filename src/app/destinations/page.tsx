@@ -18,9 +18,21 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Destinations & Tours | Events Factory Rwanda",
+  title: "DMC Rwanda | MICE, Corporate Incentive Travel & Tours | Events Factory",
   description:
-    "Explore Rwanda with Events Factory — your Destination Management Company (DMC) for gorilla trekking, wildlife safaris, city tours, and corporate incentive travel.",
+    "Events Factory Rwanda is your Destination Management Company (DMC) for MICE travel, corporate incentive trips, conference pre/post tours, gorilla trekking, wildlife safaris, and luxury experiences. Conference Organizer Kigali.",
+  keywords: [
+    'MICE Rwanda',
+    'DMC Rwanda',
+    'Conference Organizer Kigali',
+    'Corporate Events Rwanda',
+    'Event Agency Rwanda',
+    'Conference Management Services',
+    'Event Planning Rwanda',
+    'PCO Rwanda',
+    'incentive travel Rwanda',
+    'corporate retreat Rwanda',
+  ],
 };
 
 const dmcServices = [
@@ -186,31 +198,44 @@ export default function DestinationsPage() {
       {/* Hero */}
       <section
         style={{
-          paddingTop: "160px",
-          paddingBottom: "80px",
+          minHeight: "100vh",
           backgroundColor: "#0C0C0C",
           position: "relative",
           overflow: "hidden",
           backgroundImage: "url(/dmc/50489669208_fc63428e08_o.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center 35%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          paddingBottom: "80px",
         }}
       >
+        {/* Top gradient — keeps transparent navbar readable */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(170deg, rgba(12,12,12,0.05) 0%, rgba(12,12,12,0.6) 50%, #0C0C0C 100%)",
+            background: "linear-gradient(to bottom, rgba(12,12,12,0.65) 0%, transparent 28%)",
           }}
         />
+        {/* Diagonal gradient — lightened so image is visible */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(90deg, rgba(12,12,12,0.75) 0%, transparent 65%)",
+            background: "linear-gradient(170deg, rgba(12,12,12,0.05) 0%, rgba(12,12,12,0.35) 50%, rgba(12,12,12,0.6) 100%)",
           }}
         />
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px", position: "relative" }}>
+        {/* Left-side gradient — lightened */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(90deg, rgba(12,12,12,0.45) 0%, transparent 65%)",
+          }}
+        />
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px", position: "relative", width: "100%" }}>
           <AnimatedSection>
             <SectionLabel>Destination Management Company</SectionLabel>
             <h1
@@ -238,9 +263,7 @@ export default function DestinationsPage() {
                 lineHeight: 1.78,
               }}
             >
-              Our DMC services combine local expertise, strong supplier networks, operational excellence,
-              and technology-driven coordination to ensure every guest experiences Rwanda beyond the
-              conference room.
+              Rwanda&apos;s leading event management company and MICE specialist. Our DMC services combine local expertise, strong supplier networks, and end-to-end conference management to ensure every delegate experiences Rwanda beyond the conference room.
             </p>
             <div style={{ marginTop: "36px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link
@@ -284,7 +307,6 @@ export default function DestinationsPage() {
             </div>
           </AnimatedSection>
         </div>
-
       </section>
 
       {/* Rwanda as a Destination */}
@@ -607,9 +629,10 @@ export default function DestinationsPage() {
                 fontFamily: "var(--font-inter), Inter, sans-serif",
                 fontSize: "16px",
                 color: "#9CA3AF",
-                margin: "0 0 32px 0",
+                margin: "0 auto 32px",
                 lineHeight: 1.7,
                 maxWidth: "560px",
+                width: "100%",
                 textAlign: "center",
               }}
             >
@@ -768,7 +791,7 @@ export default function DestinationsPage() {
                         fontSize: "36px",
                         fontWeight: 300,
                         lineHeight: 1,
-                        color: "rgba(196,27,27,0.18)",
+                        color: "rgba(196,27,27,0.58)",
                         marginBottom: "10px",
                       }}
                     >
@@ -805,7 +828,7 @@ export default function DestinationsPage() {
                       style={{
                         fontFamily: "var(--font-inter), Inter, sans-serif",
                         fontSize: "12.5px",
-                        color: "#6B7280",
+                        color: "#9CA3AF",
                         lineHeight: 1.65,
                         margin: 0,
                       }}

@@ -22,9 +22,24 @@ import SectionLabel from '@/components/ui/SectionLabel';
 import CTABanner from '@/components/sections/CTABanner';
 
 export const metadata: Metadata = {
-  title: 'Services | Events Factory Rwanda',
+  title: 'Event Management Services Rwanda | PCO, AV Production, Event Branding | Events Factory',
   description:
-    'From corporate conferences and summits to AV production and brand activations — discover the full range of event services offered by Events Factory Rwanda, your trusted PCO.',
+    'Events Factory Rwanda offers full-service event management, conference management, audiovisual solutions, simultaneous interpretation, hybrid event solutions, event branding, exhibition management, and corporate event planning across Rwanda and Africa.',
+  keywords: [
+    'Event Management Company Rwanda',
+    'Professional Conference Organizer Rwanda',
+    'Event Production Rwanda',
+    'Corporate Events Rwanda',
+    'Event Planning Rwanda',
+    'Event Agency Rwanda',
+    'Conference Management Services',
+    'Event Solutions Rwanda',
+    'Event Branding Rwanda',
+    'Audiovisual Solutions Rwanda',
+    'Hybrid Event Solutions Africa',
+    'Simultaneous Interpretation Rwanda',
+    'event managers in Rwanda',
+  ],
 };
 
 const services = [
