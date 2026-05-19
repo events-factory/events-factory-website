@@ -18,9 +18,21 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Destinations & Tours | Events Factory Rwanda",
+  title: "DMC Rwanda | MICE, Corporate Incentive Travel & Tours | Events Factory",
   description:
-    "Explore Rwanda with Events Factory — your Destination Management Company (DMC) for gorilla trekking, wildlife safaris, city tours, and corporate incentive travel.",
+    "Events Factory Rwanda is your Destination Management Company (DMC) for MICE travel, corporate incentive trips, conference pre/post tours, gorilla trekking, wildlife safaris, and luxury experiences. Conference Organizer Kigali.",
+  keywords: [
+    'MICE Rwanda',
+    'DMC Rwanda',
+    'Conference Organizer Kigali',
+    'Corporate Events Rwanda',
+    'Event Agency Rwanda',
+    'Conference Management Services',
+    'Event Planning Rwanda',
+    'PCO Rwanda',
+    'incentive travel Rwanda',
+    'corporate retreat Rwanda',
+  ],
 };
 
 const dmcServices = [
@@ -251,9 +263,7 @@ export default function DestinationsPage() {
                 lineHeight: 1.78,
               }}
             >
-              Our DMC services combine local expertise, strong supplier networks, operational excellence,
-              and technology-driven coordination to ensure every guest experiences Rwanda beyond the
-              conference room.
+              Rwanda&apos;s leading event management company and MICE specialist. Our DMC services combine local expertise, strong supplier networks, and end-to-end conference management to ensure every delegate experiences Rwanda beyond the conference room.
             </p>
             <div style={{ marginTop: "36px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link
