@@ -98,7 +98,7 @@ export default function Navbar() {
                     fontWeight: 500,
                     letterSpacing: '0.1em',
                     textTransform: 'uppercase',
-                    color: pathname === link.href ? '#C41B1B' : '#9CA3AF',
+                    color: pathname === link.href ? '#C41B1B' : '#FFFFFF',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
                   }}
