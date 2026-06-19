@@ -3,9 +3,9 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const stats = [
-  { value: "400+", label: "Events Delivered" },
+  { value: "800+", label: "Events Delivered" },
   { value: "20", label: "Years Experience" },
-  { value: "250K+", label: "Delegates Hosted" },
+  { value: "450K+", label: "Delegates Hosted" },
   { value: "250+", label: "ExhibitIONs & Trade Shows" },
 ];
 

@@ -2,8 +2,61 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+
+// YouTube only accepts: 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2
+const VIDEO_SPEED = 0.5;
+
+declare global {
+  interface Window {
+    YT?: any;
+    onYouTubeIframeAPIReady?: () => void;
+  }
+}
 
 export default function Hero() {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    let player: any;
+
+    function createPlayer() {
+      if (!iframeRef.current || !window.YT?.Player) return;
+      player = new window.YT.Player(iframeRef.current, {
+        events: {
+          onReady: (e: any) => e.target.setPlaybackRate(VIDEO_SPEED),
+          // Re-apply on each loop, since YouTube resets the rate on restart
+          onStateChange: (e: any) => {
+            if (e.data === window.YT.PlayerState.PLAYING) {
+              e.target.setPlaybackRate(VIDEO_SPEED);
+            }
+          },
+        },
+      });
+    }
+
+    if (window.YT?.Player) {
+      createPlayer();
+    } else {
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.body.appendChild(tag);
+      }
+      const prev = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        prev?.();
+        createPlayer();
+      };
+    }
+
+    return () => {
+      try {
+        player?.destroy?.();
+      } catch {}
+    };
+  }, []);
+
   return (
     <section
       style={{
@@ -28,6 +81,7 @@ export default function Hero() {
         }}
       >
         <iframe
+          ref={iframeRef}
           src="https://www.youtube.com/embed/KIsRlfqPOCY?autoplay=1&mute=1&loop=1&playlist=KIsRlfqPOCY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3&disablekb=1&start=0&end=36"
           title="Events Factory background"
           allow="autoplay; encrypted-media"

@@ -72,7 +72,7 @@ export default function AboutPage() {
         />
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px", position: "relative" }}>
           <AnimatedSection>
-            <SectionLabel>Who We Are</SectionLabel>
+            <SectionLabel>About Us</SectionLabel>
             <h1
               style={{
                 fontFamily: "var(--font-oswald), Oswald, sans-serif",
@@ -80,11 +80,12 @@ export default function AboutPage() {
                 fontWeight: 700,
                 textTransform: "uppercase",
                 color: "#FFFFFF",
-                lineHeight: 1,
+                lineHeight: 1.05,
                 margin: "8px 0 0 0",
               }}
             >
-              About <span style={{ color: "#C41B1B" }}>Us</span>
+              Your Partner for Conferences,{" "}
+              <span style={{ color: "#C41B1B" }}>Meetings and Destination Experiences</span>
             </h1>
            
           </AnimatedSection>
@@ -175,9 +176,9 @@ export default function AboutPage() {
               </div>
               <div className="ef-stats-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", backgroundColor: "#222222" }}>
                 {[
-                  { value: "400+", label: "Events Delivered" },
+                  { value: "800+", label: "Events Delivered" },
                   { value: "20", label: "Years Experience" },
-                  { value: "250K+", label: "Delegates Hosted" },
+                  { value: "450K+", label: "Delegates Hosted" },
                   { value: "250+", label: "Exhibitions & Trade Shows" },
                 ].map((stat) => (
                   <div key={stat.label} style={{ backgroundColor: "#0C0C0C", padding: "40px", textAlign: "center" }}>
