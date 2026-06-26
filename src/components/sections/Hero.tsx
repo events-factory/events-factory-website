@@ -38,7 +38,11 @@ export default function Hero() {
     if (window.YT?.Player) {
       createPlayer();
     } else {
-      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+      if (
+        !document.querySelector(
+          'script[src="https://www.youtube.com/iframe_api"]',
+        )
+      ) {
         const tag = document.createElement('script');
         tag.src = 'https://www.youtube.com/iframe_api';
         document.body.appendChild(tag);
@@ -91,7 +95,7 @@ export default function Hero() {
             left: '50%',
             width: '120vw',
             height: '120vh',
-            
+
             minWidth: '120vw',
             minHeight: '120vh',
             transform: 'translate(-50%, -50%)',
@@ -182,7 +186,7 @@ export default function Hero() {
                 letterSpacing: '-0.02em',
               }}
             >
-              We Create Memorable
+              We Deliver Seamless Events
             </span>
             <span
               style={{
@@ -192,7 +196,7 @@ export default function Hero() {
                 letterSpacing: '-0.02em',
               }}
             >
-              Experiences
+              That Create Memorable Experiences.
             </span>
           </h1>
 
